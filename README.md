@@ -1,4 +1,4 @@
-Moodio — AI-Based Adaptive Learning & Emotion-Aware Study Assistant
+Moodio — AI-Based Adaptive Learning Assistant
 
 Moodio is an AI-powered web application that generates personalized study plans, tracks progress, provides quizzes, and adapts to user.
 
