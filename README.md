@@ -1,12 +1,10 @@
 Moodio — AI-Based Adaptive Learning & Emotion-Aware Study Assistant
 
-Moodio is an AI-powered web application that generates personalized study plans, tracks progress, provides quizzes, and adapts to user emotions using real-time webcam detection.
+Moodio is an AI-powered web application that generates personalized study plans, tracks progress, provides quizzes, and adapts to user.
 
 🚀 Features
 
 AI-Generated Study Plans using Google Gemini API
-
-Emotion Detection with OpenCV + Haar Cascade
 
 Interactive Dashboard & Roadmaps
 
@@ -56,13 +54,11 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Open in browser:
-👉 http://127.0.0.1:8000/
 
 📌 Project Summary
 
 Moodio blends AI and emotional intelligence to create a personalized learning companion.
-It generates study plans, adapts to mood, provides quizzes, and tracks progress in detail.
+It generates study plans, provides quizzes, and tracks progress in detail.
 
 🔮 Future Enhancements
 
