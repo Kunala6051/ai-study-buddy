@@ -23,7 +23,7 @@ Frontend: HTML, CSS, JavaScript
 Backend: Django (Python)
 
 
-AI: Google Gemini API, OpenCV, NumPy
+AI: Google Gemini API, NumPy
 
 
 Database: MongoDB
@@ -34,9 +34,6 @@ Database: MongoDB
 Moodio/
 │── manage.py
 │── db.sqlite3
-│── quiz_history.json
-│── users.json
-│── result.json
 │
 ├── Moodio/          # Django project (settings, urls, wsgi/asgi)
 │
@@ -57,7 +54,7 @@ python manage.py runserver
 
 📌 Project Summary
 
-Moodio blends AI and emotional intelligence to create a personalized learning companion.
+Moodio blends AI to create a personalized learning companion.
 It generates study plans, provides quizzes, and tracks progress in detail.
 
 🔮 Future Enhancements
