@@ -34,9 +34,9 @@
     <div class="logo">Moodio</div>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="#">About</a>
+      <a href="{% url 'chatbot:about' %}">About</a>
       <a href="#">Contact</a>
-      <a href="signup.html" class="sign-in" style="color: white;">Sign Up</a>
+      <a href="{% url 'chatbot:signup' %}"class="sign-in" style="color: white;">Sign Up</a>
     </div>
   </nav>
 

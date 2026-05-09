@@ -15,8 +15,8 @@
       <span>Moodio</span>
     </div>
     <div class="nav-links">
-      <a href="index.html" class="sign-in">Home</a>
-      <a href="signin.html" class="sign-in" style="color: white;">Sign In</a>
+      <a href="{% url 'chatbot:index' %}" class="sign-in">Home</a>
+      <a href="{% url 'chatbot:signin' %}" class="sign-in" style="color: white;">Sign In</a>
     </div>
   </nav>
 
@@ -53,25 +53,7 @@
       </form>
 
 
-      {% comment %} <form>
-        <input type="text" placeholder="Username" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Enter Password" required>
-        
-        <select required>
-          <option value="">Educational level</option>
-          <option>Secondary School</option>
-          <option>University</option>
-        </select>
-
-        <label class="checkbox">
-          <input type="checkbox"> Keep me logged in
-        </label>
-
-        <button type="submit" class="primary-btn">Sign Up</button>
-      </form> {% endcomment %}
-
-      <p class="alt-link">Already have an account? <a href="signin.html">Log in</a></p>
+      <p class="alt-link">Already have an account? <a href="{% url 'chatbot:signin' %}">Log in</a></p>
     </div>
 
     <div class="right">

@@ -13,16 +13,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.5;
 }
-/* body {
-  min-height: 100vh;
-  margin: 0;
-  background:
-    linear-gradient(180deg, rgba(66,153,255,0.12), rgba(144,85,255,0.06)),
-    url("https://yourdomain.com/path/to/wavey.svg") no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-} */
+
   body {
   background: linear-gradient(to bottom right, rgba(66,153,255,0.3), rgba(144,85,255,0.3)),
               url("https://www.svgbackgrounds.com/wp-content/uploads/2021/05/wavey-fingerprint.svg");

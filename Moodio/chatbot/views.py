@@ -33,6 +33,8 @@ from datetime import datetime
 from .mongo import chat_history_col
 
 
+
+
 def test_mongo(request):
     try:
         # Insert a sample record
@@ -142,8 +144,8 @@ def google_signin(request):
         return JsonResponse({"status": "success"})
     return JsonResponse({"error": "Invalid request"}, status=400)
 
-# API Key (loaded properly from environment variable)
-API_KEY = "AIzaSyBI4s5A1Wh9ZtMYHToqD8DbedEyHcc0Uks"
+
+API_KEY = settings.GOOGLE_GENAI_API_KEY
 genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel("gemini-2.5-flash")
@@ -201,7 +203,7 @@ def generate_roadmap(request):
     try:
         # ---- Request data JSON se parse kar rahe hain ----
         body = json.loads(request.body)    # client se aaya JSON data python dict me convert
-        user_name = request.user.username  # current login user ka username
+        user_name = request.session.get("user_name")  # current login user ka username
 
         
         goal = body.get("goal", "").strip()           
@@ -277,9 +279,9 @@ Respond ONLY with JSON.
 
 
 # -------------------- Get User Roadmaps --------------------
-@login_required
+
 def get_user_roadmaps(request):
-    user_name = request.user.username
+    user_name = request.session.get("user_name")
     roadmaps = list(roadmaps_col.find({"user_name": user_name}))
 
     # ✅ Get the last 5 roadmaps (most recent ones)
@@ -345,7 +347,6 @@ def delete_roadmap(request):
         return JsonResponse({"error": str(e)}, status=500)
     
 
-@login_required
 def get_roadmap_details(request, uuid):
     roadmap = roadmaps_col.find_one({"uuid": uuid}, {"_id": 0})
     return JsonResponse(roadmap)
