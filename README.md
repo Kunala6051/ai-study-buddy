@@ -2,4 +2,6 @@
 
 Used Gemini api key
 
-tech stack: html, css, django
+tech stack: 
+  frontend: html, css
+  backend: django
